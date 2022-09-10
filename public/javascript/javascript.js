@@ -64,7 +64,7 @@ console.log(snap.data())
     const total = localStorage.getItem("CartTotal");
     const TotalPrice = JSON.parse(total);
     document.getElementById("totalP").innerHTML=snap.data().Total;
-    document.getElementById("pro").innerHTML=TotalPrice;
+    document.getElementById("pro").innerHTML=snap.data().Total;
     console.log(products)
     const List = document.getElementById("listproducts")
     let html ='';
