@@ -1,9 +1,10 @@
    
   
-  const total = localStorage.getItem("CartTotal");
-  const TotalPrice = JSON.parse(total);
-  let amount = TotalPrice * 100;
-  
+  var num = document.querySelector("myPrice").innerHTML
+ 
+  let amount = parseInt(num) * 100;
+
+  console.log(amount)
   var sdk = new window.YocoSDK({
     publicKey: 'pk_live_c2eec24eKbAyB9N9fe94',
   });
