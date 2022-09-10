@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.set("view engine", 'ejs')
 
-app.get('/pay', (req, res)=>{
+app.get('/', (req, res)=>{
     console.log("here");
     res.render('index', {text:"World"})
 })
