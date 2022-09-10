@@ -55,13 +55,15 @@
 
   function getProduct() {
     const CartProduct = localStorage.getItem("Cart");
-    const products = JSON.parse(CartProduct);
+    db.collection("CartItems").doc('96325').get().then((snap)=>{
+console.log(snap.data())
+    const products = snap.data().MyCart
     const Qua = localStorage.getItem("CartQuantity");
     const quntity = JSON.parse(Qua);
-    document.getElementById("quantity").innerHTML=quntity;
+    document.getElementById("quantity").innerHTML=snap.data().Quant;
     const total = localStorage.getItem("CartTotal");
     const TotalPrice = JSON.parse(total);
-    document.getElementById("totalP").innerHTML=TotalPrice;
+    document.getElementById("totalP").innerHTML=snap.data().Total;
     document.getElementById("pro").innerHTML=TotalPrice;
     console.log(products)
     const List = document.getElementById("listproducts")
@@ -82,5 +84,6 @@
         html +=div;
         List.innerHTML=html;
     });
+  })
   }
   getProduct()
