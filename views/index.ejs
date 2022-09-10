@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Multig Payments</h2>
+    <div class="payBox">
+
+<div class="left">
+  <h3>Products you are paying</h3>
+  <p>Cart Items <span id="quantity"></span></p>
+<div class="cont" id="listproducts">
+
+</div>
+
+<div class="totalPrice">
+  <h3>Sub Total R <span id="totalP"></span></h3>
+</div>
+</div>
+<div class="right">
+<h3>Enter Bank Details below</h3>
+  <form action="/pay" id="payment-form" method="POST">
+    <div class="one-liner">
+      <div id="card-frame">
+        <!-- Yoco Inline form will be added here -->
+      </div>
+      <button id="pay-button">
+        PAY R <span id="pro"></span>
+      </button>
+    </div>
+    <p class="success-payment-message"></p>
+  </form>
+
+</div>
+  
+</div>
+<a href="http://localhost:3000/"> Back</a>
+</div> 
+    <script src="https://js.yoco.com/sdk/v1/yoco-sdk-web.js"></script>
+<!-- JavaScript Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="/javascript/javascript.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,109 @@
+body{
+    
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+.container h2{
+    text-align: center;
+    margin: 40px;
+    width: 100%;
+    color: rgb(197, 50, 50);
+}
+.payBox{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ 
+  gap: 40px;  
+  width: 100%;
+}
+.payBox .left{
+    position: relative;
+    width: 45%;
+    border-radius: 10px;
+    border: 1px solid rgb(204, 204, 204);
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.payBox .left h3{
+    margin: 20px;
+}
+.payBox .right{
+    position: relative;
+    width: 45%;
+    border: 1px solid rgb(204, 204, 204);
+    
+    border-radius: 10px;
+    height: fit-content;
+}
+.payBox .right form{
+    margin: 20px;
+}
+.payBox .right h3{
+    margin: 20px;
+}
+.product{
+    position: relative;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.product .product-I-N{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.product .product-I-N h5{
+    font-weight: 100;
+}
+.product .product-I-N .img-cont{
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.product .product-I-N .img-cont img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.totalPrice h3{
+    text-align: right;
+}
+.left p{
+    position: relative;
+    text-align: right;
+    font-size: 22px;
+    margin-right: 20px;
+}
+.one-liner button{
+    width: 100%;
+    border-radius: 20px;
+    background-color: brown;
+    margin-top: 20px;
+    color: aliceblue;
+    padding: 5px;
+    border: 0;
+    transition: .6s;
+}
+.one-liner button:hover{
+  
+    background-color: rgb(199, 66, 66);
+   
+    padding: 10px;
+    transition: .6s;
+    border-radius: 30px;
+}
