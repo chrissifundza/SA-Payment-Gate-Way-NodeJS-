@@ -35,15 +35,21 @@ function displayForm(total){
       } else {
         const token = result;
         alert("card successfully tokenised: " + token.id);
-
+let data ={amount:amount,token:token.id}
         fetch('/pay',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
-            body:JSON.stringify({token:token.id})
+            body:JSON.stringify({data})
         }).then((response)=> response.json())
         .then((data)=>{
             console.log(data)
-            location.href='http://localhost:3000/success'
+            if(data.status=='successful'){
+              
+                location.href='http://localhost:3000/success';
+              
+              
+            }
+            
         })
       }
     }).catch(function (error) {

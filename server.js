@@ -22,12 +22,13 @@ app.post('/pay',(req, res)=>{
     
 
     const SECRET_KEY = 'sk_live_6da47bff0e314Ykf8ba4522b6a48'
+    console.log(req.body)
 
 axios.post(
   'https://online.yoco.com/v1/charges/',
   {
-    token: req.body.token,
-    amountInCents: 599,
+    token: req.body.data.token,
+    amountInCents: req.body.data.amount,
     currency: 'ZAR',
   },
   {
