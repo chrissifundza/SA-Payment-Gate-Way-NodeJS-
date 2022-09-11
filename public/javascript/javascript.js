@@ -1,8 +1,8 @@
    
+function displayForm(total){
+    
   
-  var num = document.querySelector("myPrice").innerHTML
- 
-  let amount = parseInt(num) * 100;
+  let amount = parseInt(total) * 100;
 
   console.log(amount)
   var sdk = new window.YocoSDK({
@@ -23,12 +23,11 @@
   var submitButton = document.getElementById('pay-button');
   form.addEventListener('submit', function (event) {
     event.preventDefault()
-    // Disable the button to prevent multiple clicks while processing
+    
     submitButton.disabled = true;
-    // This is the inline object we created earlier with the sdk
+    
     inline.createToken().then(function (result) {
-      // Re-enable button now that request is complete
-      // (i.e. on success, on error and when auth is cancelled)
+      
       submitButton.disabled = false;
       if (result.error) {
         const errorMessage = result.error.message;
@@ -54,6 +53,7 @@
     });
   });
 
+}
   function getProduct() {
     const CartProduct = localStorage.getItem("Cart");
     db.collection("CartItems").doc('96325').get().then((snap)=>{
@@ -66,6 +66,7 @@ console.log(snap.data())
     const TotalPrice = JSON.parse(total);
     document.getElementById("totalP").innerHTML=snap.data().Total;
     document.getElementById("pro").innerHTML=snap.data().Total;
+    displayForm(snap.data().Total);
     console.log(products)
     const List = document.getElementById("listproducts")
     let html ='';
