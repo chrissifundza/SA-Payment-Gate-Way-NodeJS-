@@ -1,9 +1,10 @@
    
+displayForm(5)
 function displayForm(total){
     
   
   let amount = parseInt(total) * 100;
-
+  document.getElementById("pro").innerHTML=total;
   console.log(amount)
   var sdk = new window.YocoSDK({
     publicKey: 'pk_live_c2eec24eKbAyB9N9fe94',
@@ -71,7 +72,7 @@ console.log(snap.data())
     const total = localStorage.getItem("CartTotal");
     const TotalPrice = JSON.parse(total);
     document.getElementById("totalP").innerHTML=snap.data().Total;
-    document.getElementById("pro").innerHTML=snap.data().Total;
+    
     displayForm(snap.data().Total);
     console.log(products)
     const List = document.getElementById("listproducts")
@@ -94,4 +95,3 @@ console.log(snap.data())
     });
   })
   }
-  getProduct()

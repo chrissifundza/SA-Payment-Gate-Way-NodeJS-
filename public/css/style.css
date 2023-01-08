@@ -1,5 +1,5 @@
 body{
-    
+   background-color: gainsboro; 
 }
 .container{
     position: relative;
@@ -9,12 +9,21 @@ body{
     align-items: center;
     width: 100%;
     text-align: center;
+    
 }
 .container h2{
     text-align: center;
     margin: 40px;
     width: 100%;
-    color: rgb(197, 50, 50);
+    color: rgb(230, 132, 67);
+   text-transform: uppercase;
+   font-weight: bold;
+   
+   
+}
+.container h2 img{
+    position: relative;
+    height: 70px;
 }
 .payBox{
   position: relative;
@@ -32,7 +41,7 @@ body{
     border: 1px solid rgb(204, 204, 204);
     justify-content: center;
     align-items: center;
-    
+    background-color: white;
 
 }
 .payBox .left h3{
@@ -40,17 +49,48 @@ body{
 }
 .payBox .right{
     position: relative;
-    width: 45%;
+    width: 50%;
     border: 1px solid rgb(204, 204, 204);
     
     border-radius: 10px;
     height: fit-content;
+    background-color: white;
 }
+@media only screen and (max-width: 1030px) {
+    .payBox .right {
+        width: 65%;
+    }
+  }
+  @media only screen and (max-width: 994px) {
+    .payBox .right {
+        width: 70%;
+    }
+  }
+  @media only screen and (max-width: 772px) {
+    .payBox .right {
+        width: 80%;
+        
+    }
+    .payBox .right h3{
+       font-size: 15px;
+        
+    }
+    
+.container h2{
+    font-size: 18px;
+   
+}
+  }
 .payBox .right form{
     margin: 20px;
 }
 .payBox .right h3{
     margin: 20px;
+    color: rgb(37, 110, 37);
+    text-transform: uppercase;
+    font-weight: 100;
+    font-stretch: narrower;
+    
 }
 .product{
     position: relative;
@@ -92,7 +132,7 @@ body{
 .one-liner button{
     width: 100%;
     border-radius: 20px;
-    background-color: brown;
+    background-color: rgb(230, 132, 67);
     margin-top: 20px;
     color: aliceblue;
     padding: 5px;
@@ -101,9 +141,9 @@ body{
 }
 .one-liner button:hover{
   
-    background-color: rgb(199, 66, 66);
+    background-color: orange;
    
-    padding: 10px;
+    
     transition: .6s;
     border-radius: 30px;
 }

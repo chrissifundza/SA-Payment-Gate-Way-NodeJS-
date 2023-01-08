@@ -8,10 +8,10 @@ app.use(express.static("public"));
 //request from body data
 app.use(express.urlencoded({extended:true}))
 
+console.log("hey")
 //request from api/ fetch
 app.use(express.json())
 app.set("view engine", 'ejs')
-
 app.get('/', (req, res)=>{
     console.log("here");
     res.render('index', {text:"World"})
